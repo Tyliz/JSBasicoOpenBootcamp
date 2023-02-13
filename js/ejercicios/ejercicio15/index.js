@@ -6,7 +6,7 @@ function Fibonacci(num) {
 	let lstSecuencia = [1, 1];
 	if (num < 1)
 		return [];
-	if (num == 1)
+	if (num === 1)
 		return [1];
 
 	for (let i = 2; i < num; i++) {
@@ -14,12 +14,5 @@ function Fibonacci(num) {
 	}
 	return lstSecuencia;
 }
-function Fibonacci2(num) {
-	let lstSecuencia = [1, 1];
-	for (let i = 2; i < num; i++) {
-		lstSecuencia.push(lstSecuencia[i - 1] + lstSecuencia[i - 2]);
-	}
-	return ((num < 1) && (lstSecuencia = [])) || ((num == 1) && (lstSecuencia = [1])) || lstSecuencia;
-}
 
-console.log(Fibonacci2(6));
+console.log(Fibonacci(6));
